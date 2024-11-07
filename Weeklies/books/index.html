@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noa's Reading Library</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    
+    <h1>Noa's Reading Library</h1>
+
+    <h2 id="cr">Currently Reading:</h2>
+    <div id="currentRead"></div>
+
+    <!-- Filter Bar -->
+    <div id="btnContainer">
+      <button class="btn active" onclick="filterSelection('all')">
+        Show all
+      </button>
+      <button class="btn" onclick="filterSelection('5')">5 Stars</button>
+      <button class="btn" onclick="filterSelection('4')">4 Stars</button>
+      <button class="btn" onclick="filterSelection('3')">3 Stars</button>
+      <button class="btn" onclick="filterSelection('2')">2 Stars</button>
+      <button class="btn" onclick="filterSelection('1')">1 Star</button>
+    </div>
+
+    <!-- container for js -->
+    <div id="books"></div>
+
+    <br>
+    <a href="https://docs.google.com/spreadsheets/d/1OV_ErFOx8-10jqWy4b8HO-ZoOIMh3TcUNbmrcbQlb50/edit?usp=sharing" target="_blank">Google Sheets Link</a>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&family=Notable&family=Righteous&display=swap");
+@font-face {
+  font-family: movement;
+  src: url(Movement/Desktop/Movement-DirectThin.otf);
+}
+
+/* filter bar styling */
+#btnContainer {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: sticky;
+  top: 10px;
+}
+
+/* helper for the buttons js */
+#hide {
+  display: none;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  border-radius: 3px;
+  background-color: #33658a;
+  color: #fbf1ee;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #204257;
+}
+
+.btn.active {
+  background-color: #21333e;
+  color: #fbf1ee;
+}
+
+/* page styling */
+body {
+  background-color: #86bbd8;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-family: "movement";
+  font-size: 3rem;
+  text-align: center;
+  color: #9c1f1c;
+}
+
+#cr {
+  font-style: italic;
+}
+
+#books {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+}
+
+@media screen and (max-width: 992px) {
+  #books {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #books {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* books styling */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fbf1ee;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+h2 {
+  margin: 0;
+  padding-bottom: 5px;
+  font-family: sans-serif;
+  color: #2f4858;
+}
+
+h3 {
+  margin: 0;
+  padding-bottom: 5px;
+  color: #33658a;
+}
+
+#rating {
+  padding: 5px;
+  padding-bottom: 7px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  background-color: #86bbd8;
+  display: inline;
+}
+
+.container img {
+  width: 100px;
+  border-radius: 5px;
+}
+
+/* current read styling */
+.current {
+  background-color: #fbf1ee;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.current p {
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+.current img {
+  width: 90px;
+  border-radius: 5px;
+  float: right;
+  margin-left: 5px;
+}

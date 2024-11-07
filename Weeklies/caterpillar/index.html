@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Very Hungry Caterpillar</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="landing">
+      <h1>The Very Hungry Caterpillar</h1>
+      <br />
+      <h3>By Eric Carle</h3>
+      <p>Adapted to Web by Noa Lahan</p>
+      <br />
+      <button>Click Me</button>
+    </div>
+
+    <div class="sunrise">
+      <img src="image/moon.png" alt="moon" width="40%" id="moon" />
+      <img src="image/sun.png" alt="sun" width="40%" id="sun" />
+      <img src="image/leaf.png" alt="leaf" width="30%" id="leaf" />
+      <img
+        src="image/caterpillar.png"
+        alt="caterpillar"
+        width="20%"
+        id="caterpillar"
+      />
+      <img src="image/egg.png" alt="egg" width="13%" id="egg" />
+      <p>In the light of the moon a little egg lay on a leaf.</p>
+    </div>
+
+    <div class="food">
+      <ul>
+        <li>
+          <p id="a">
+            On Monday he ate through one apple, but he was still hungry.
+          </p>
+          <img src="image/apple.png" alt="apple" />
+        </li>
+        <li>
+          <p id="b">
+            On Tuesday he ate through two pears, but he was still hungry.
+          </p>
+          <img src="image/pear.png" alt="pear" />
+        </li>
+        <li>
+          <p id="c">
+            On Wednesday he ate through three plums, but he was still hungry.
+          </p>
+          <img src="image/plum.png" alt="plum" />
+        </li>
+        <li>
+          <p id="d">
+            On Thursday he ate through four strawberries, but he was still
+            hungry.
+          </p>
+          <img src="image/strawberry.png" alt="strawberry" />
+        </li>
+        <li>
+          <p id="e">
+            On Friday he ate through five oranges, but he was still hungry.
+          </p>
+          <img src="image/orange.png" alt="orange" />
+        </li>
+        <li>
+          <p id="f">
+            On Saturday he ate through one piece of chocolate cake, one ice
+            cream cone, one pickle, one slice of swiss cheese, one slice of
+            salami, one lollipop, one piece of cherry pie, one sausage, one
+            cupcake, and one slice of watermelon.
+            <br />
+            ->
+          </p>
+          <div id="row">
+            <img src="image/all.png" alt="all" />
+            <p id="f">
+              That night he had a stomachache!
+              <br />
+              <button>Yikes!</button>
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="fat">
+      <div id="flex">
+        <img src="image/leaf.png" alt="leaf" id="leaf" />
+        <p>
+          The next day was Sunday again. The caterpillar ate through one nice
+          green leaf, and after that he felt much better.
+        </p>
+        <p>
+          Now he wasn't hungry any more-and he wasn't a little caterpillar any
+          more.
+        </p>
+        <p>He was a big, fat caterpillar.</p>
+        <p id="note">(Don't fat shame kids)</p>
+      </div>
+      <div id="trail"></div>
+      <img src="image/caterpillar.png" alt="caterpillar" id="caterpillar" />
+      <div id="flex">
+        <img src="image/butterly.png" alt="butterfly" id="butterfly" />
+        <img src="image/cacoon.png" alt="cacoon" id="cacoon" />
+        <img src="image/bigfat.png" alt="fat caterpillar" id="bigfat" />
+        <p>
+          He built a small house, called a cocoon, around himself. He stayed
+          inside for more than two weeks.
+        </p>
+        <p>Then he nibbled a hole in the cocoon, pushed his way out and...</p>
+        <p>He was a beautiful butterfly!</p>
+        <p id="note">Refresh to read again!</p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

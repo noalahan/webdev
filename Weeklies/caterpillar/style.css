@@ -1,0 +1,195 @@
+*,
+html {
+  margin: 0;
+}
+img {
+  position: fixed;
+}
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+button {
+  width: 40%;
+  border-radius: 10px;
+  align-self: center;
+  font-size: 100%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: white;
+  color: green;
+}
+
+.landing {
+  height: 100vh;
+  background-color: darkgreen;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 250%;
+  color: azure;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.sunrise {
+  height: 300vh;
+  background-image: linear-gradient(
+    midnightblue,
+    midnightblue,
+    black,
+    lightblue,
+    lightblue,
+    white
+  );
+}
+#moon {
+  right: 30px;
+}
+#sun {
+  position: absolute;
+  right: 30px;
+  top: 205vh;
+}
+.sunrise #leaf {
+  bottom: 40px;
+  left: 10px;
+}
+#egg {
+  /* calc function according to leaf? */
+  bottom: 100px;
+  left: 90px;
+}
+.sunrise #caterpillar {
+  /* calc function according to leaf? */
+  bottom: 110px;
+  left: 95px;
+  display: none;
+}
+.sunrise p {
+  width: 40%;
+  top: 30px;
+  left: 20px;
+  padding: 30px;
+  color: aliceblue;
+  background-color: black;
+  border-radius: 40px;
+  font-size: 25px;
+  position: fixed;
+}
+
+.food {
+  min-height: 100vh;
+  width: 230vw;
+  background: linear-gradient(
+    #386641,
+    #386641,
+    #6a994e,
+    #6a994e,
+    #a7c957,
+    #a7c957,
+    #cdd993,
+    #cdd993,
+    #edebcc,
+    #edebcc,
+    #ffffff,
+    #ffffff
+  );
+  background-size: 100% 100%;
+}
+.food p {
+  width: 40%;
+  padding: 5px;
+  background-color: bisque;
+  border-radius: 10px;
+}
+.food img {
+  position: static;
+  width: 190vw;
+}
+ul {
+  font-size: 25px;
+  list-style: none;
+}
+li {
+  height: 100vh;
+  position: sticky;
+  margin-left: 0;
+}
+#row {
+  display: flex;
+}
+#a {
+  background-color: #386641;
+}
+#b {
+  background-color: #6a994e;
+}
+#c {
+  background-color: #a7c957;
+}
+#d {
+  background-color: #cdd993;
+}
+#e {
+  background-color: #edebcc;
+}
+#f {
+  background-color: #ffffff;
+}
+
+.fat {
+  min-height: 100vh;
+  background-color: lightblue;
+}
+#flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+.fat p {
+  width: 50%;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+  background-color: white;
+  opacity: 0.8;
+  text-align: center;
+  font-size: 150%;
+  z-index: 1;
+}
+#note {
+  font-size: 70%;
+  width: 20%;
+}
+#flex img {
+  width: 90%;
+  height: 100%;
+  object-fit: contain;
+  position: absolute;
+}
+.fat #caterpillar {
+  width: 30%;
+  top: -30vh;
+  left: -30vw;
+}
+#trail {
+  background-image: linear-gradient(
+    to right,
+    lightblue 70%,
+    rgba(0, 0, 0, 0)
+  );
+  left: -200vw;
+  top: 0;
+  width: 200vw;
+  height: 100vh;
+  position: absolute;
+}
+#butterfly{
+  opacity: 0%;
+}
+#cacoon{
+  opacity: 0%;
+}
