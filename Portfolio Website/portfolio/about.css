@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&family=Notable&family=Raleway&family=Righteous&display=swap");
+
+body {
+  background-color: #88ccfb;
+  font-family: "Raleway", sans-serif;
+}
+.main {
+  transform: skewY(15deg);
+  margin-left: 22vw;
+}
+img {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+}
+#books{
+    width: 23vw;
+}
+#spacer {
+  /* no cutoff above, no blur below */
+  height: calc(40vw * tan(15deg));
+  /* background-color: black; */
+}
+h1 {
+  color: white;
+  font-size: 350%;
+}
+#btn {
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+
+  border-style: solid;
+  border-width: 2px 4px 3px 2px;
+
+  color: black;
+  font-size: 150%;
+}
+
+.container {
+  max-width: 70vw;
+}
+#text {
+  display: grid;
+}
+#text p {
+  font-size: 150%;
+}

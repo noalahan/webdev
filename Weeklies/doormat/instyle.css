@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Notable&family=Righteous&display=swap');
+
+body{
+    font-family: 'Notable', sans-serif;
+    color: brown;
+    font-size: 350%;
+    text-align: center;
+}
+
+@media screen and (max-width: 996px) {
+    body{
+        font-size: 300%;
+    }
+    
+}
+@media screen and (max-width: 700px) {
+    body{
+        font-size: 250%;
+    }
+}

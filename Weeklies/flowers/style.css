@@ -1,0 +1,36 @@
+*, html{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    position: fixed; /* take img out of document layout*/
+    overflow: hidden;
+    left: 50%;      /* set top left corner in */
+    top: 50%;       /* the center of the screen */
+    transform: translate(-50%, -50%); /* shift the image back to center */
+
+    width: 100%;
+    z-index: -1;    /* put in background */
+}
+
+h1{
+    margin: 5px;
+}
+
+#container{
+    margin-left: 15px;
+}
+
+@media screen and (max-width: 992px) {
+    img{
+        width: 150%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    img{
+        width: 180%;
+    }
+}

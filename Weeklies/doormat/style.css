@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+body{
+    height: 140vh;    
+    background-color: yellowgreen;
+    font-family: 'Righteous', sans-serif;
+}
+div.scroll{
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-size: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+img.arrow{
+    width: 100px;
+    position: relative;
+    top: 30px;
+}
+img.doormat{
+    width: 90%;
+    z-index: 1;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+img.key{
+    width: 15%;
+    position: fixed;
+    right: 300px;
+    bottom: 250px;
+}
+
+@media screen and (max-width: 992px) {
+    body{
+        background-color: cadetblue;
+    }
+    div.scroll{
+        writing-mode: horizontal-tb;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 60px;
+    }    
+    img.arrow{
+        width: 150px;
+    }
+    img.doormat{
+        width: 80%;
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        bottom: 5px;
+        top: auto;
+    }
+    img.key{
+        width: 15%;
+        position: fixed;
+        margin: auto;
+        left: 0;
+        right: 0;
+        bottom: 150px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body{
+        background-color:darksalmon;
+    }
+    img.arrow{
+        width: 250px;
+        position: relative;
+    }
+    img.key{
+        bottom: 100px;
+    }
+}

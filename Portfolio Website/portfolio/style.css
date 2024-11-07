@@ -1,0 +1,183 @@
+/* general */
+*,
+html {
+  margin: 0;
+  text-decoration: none;
+}
+body {
+  background-color: #1a275f;
+}
+
+/* clouds */
+#clouds {
+  left: 0;
+  top: 0;
+  height: 100%;
+  animation: moveClouds 30s linear infinite;
+}
+#clouds_back {
+  left: 0;
+  top: 0;
+  height: 100%;
+  animation: moveCloudsBack 40s linear infinite;
+}
+.clouds {
+  /* size of screen div, cuts off img access */
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+.clouds_back {
+  /* size of screen div, cuts off img access */
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 110vh;
+  overflow: hidden;
+  background-color: #88ccfb;
+}
+@keyframes moveClouds {
+  100% {
+    transform: translateX(-50%);
+  }
+}
+@keyframes moveCloudsBack {
+  100% {
+    transform: translateX(-25%);
+  }
+}
+
+/* title */
+.title {
+  width: 100%;
+  height: 80vh;
+  top: 0;
+  left: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title img {
+  height: 30vh;
+  margin: 20px;
+}
+
+/* skyline */
+#skyline {
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  top: 65vh;
+}
+
+/* building */
+.building {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#roof {
+  width: 100%;
+  z-index: 1;
+}
+
+/* windows */
+.windows {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+
+  background-color: #f2e2ba;
+  padding-top: 30vh;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 60%;
+
+  position: absolute;
+  top: 85vh;
+  left: 14.75vw;
+}
+.windows img {
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+/* stairs */
+#stairs {
+  /* div */
+  display: flex;
+  flex-direction: column;
+
+  width: 60%;
+
+  position: absolute;
+  top: 115vh;
+  left: 20vw;
+}
+.stairs {
+  /* individuals */
+  position: absolute;
+  width: 50%;
+  left: 45%;
+}
+.awning {
+  position: absolute;
+  width: 100%;
+}
+#door {
+  position: absolute;
+  align-self: center;
+  padding-top: 5%;
+}
+
+.bird {
+  width: 100%;
+  height: 80vh;
+  top: 0;
+  overflow: hidden;
+}
+#bird {
+  position: absolute;
+  width: 5%;
+  bottom: 20vh;
+  right: 10%;
+}
+
+@media screen and (max-width: 1170px) {
+  .title {
+    flex-direction: column;
+  }
+  .title img {
+    height: 15vh;
+  }
+  .windows {
+    padding-top: 20vh;
+  }
+  #stairs {
+    top: 105vh;
+  }
+}
+@media screen and (max-width: 725px) {
+  #scrap {
+    display: none;
+  }
+  .windows {
+    grid-template-columns: repeat(1, 1fr);
+    padding-top: 10vh;
+  }
+  #stairs {
+    top: 105vh;
+  }
+  #door {
+    padding-top: 0;
+  }
+}
+@media screen and (max-width: 530px) {
+  #stairs {
+    top: 100vh;
+  }
+}
