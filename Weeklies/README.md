@@ -33,3 +33,11 @@ My virtual book library. I try to keep this regularly updated. A link to the goo
 **Prompt:** A website that tells a story.
 
 A digital way to read the very hungry caterpillar.
+
+## Snow Globe
+
+<img src="img/snowglobe.png" alt="Snow Globe Website" style="width:500px; border-radius: 10px;"/>
+
+**Prompt:** Create a website using NodeJS with Vite and animejs.
+
+A virtual snow globe.
