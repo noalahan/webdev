@@ -8,8 +8,8 @@ $(document).ready(function () {
       );
       const data = await response.json();
 
-      const colorA = colors[Math.floor(Math.random() * 3)];
-      const colorB = colors[Math.floor(Math.random() * 3)];
+      const colorA = Math.floor(Math.random() * 3);
+      const colorB = Math.floor(Math.random() * 3);
 
       data.forEach((row) => {
         const containerA = document.createElement("div");
@@ -18,7 +18,10 @@ $(document).ready(function () {
         containerA.classList.add("container");
         $("#prog").append(containerA);
         prog.innerText = row.prog;
-        containerA.style.backgroundColor = colorA;
+        containerA.style.backgroundColor = colors[colorA];
+        if (colorA > 0) {
+          containerA.style.color = "white";
+        }
 
         if (row.lang != undefined) {
           const containerB = document.createElement("div");
@@ -27,7 +30,10 @@ $(document).ready(function () {
           containerB.classList.add("container");
           $("#lang").append(containerB);
           lang.innerText = row.lang;
-          containerB.style.backgroundColor = colorB;
+          containerB.style.backgroundColor = colors[colorB];
+          if (colorB > 0) {
+            containerB.style.color = "white";
+          }
         }
       });
     } catch (err) {
@@ -42,7 +48,7 @@ $(document).ready(function () {
       );
       const data = await response.json();
 
-      const color = colors[Math.floor(Math.random() * 3)];
+      const color = Math.floor(Math.random() * 3);
 
       data.forEach((row) => {
         const container = document.createElement("div");
@@ -64,7 +70,10 @@ $(document).ready(function () {
         location.innerText = row.location;
         time.innerText = row.time;
         info.innerText = row.additional;
-        container.style.backgroundColor = color;
+        container.style.backgroundColor = colors[color];
+        if (color > 0) {
+          container.style.color = "white";
+        }
       });
     } catch (err) {
       console.log(err);
@@ -78,7 +87,7 @@ $(document).ready(function () {
       );
       const data = await response.json();
 
-      const color = colors[Math.floor(Math.random() * 3)];
+      const color = Math.floor(Math.random() * 3);
 
       data.forEach((row) => {
         const container = document.createElement("div");
@@ -100,7 +109,10 @@ $(document).ready(function () {
         org.innerText = row.organization;
         time.innerText = row.time;
         info.innerText = row.details;
-        container.style.backgroundColor = color;
+        container.style.backgroundColor = colors[color];
+        if (color > 0) {
+          container.style.color = "white";
+        }
       });
     } catch (err) {
       console.log(err);
@@ -114,7 +126,7 @@ $(document).ready(function () {
       );
       const data = await response.json();
 
-      const color = colors[Math.floor(Math.random() * 3)];
+      const color = Math.floor(Math.random() * 3);
 
       data.forEach((row) => {
         const container = document.createElement("div");
@@ -133,7 +145,10 @@ $(document).ready(function () {
         name.innerText = row.name;
         time.innerText = row.time;
         info.innerText = row.info;
-        container.style.backgroundColor = color;
+        container.style.backgroundColor = colors[color];
+        if (color > 0) {
+          container.style.color = "white";
+        }
       });
     } catch (err) {
       console.log(err);

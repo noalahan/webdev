@@ -26,9 +26,11 @@ img {
 }
 h1 {
   font-size: 350%;
+  margin-bottom: 0;
 }
 h2 {
   font-size: 225%;
+  padding-top: 10px;
 }
 a {
   font-size: 180%;
@@ -59,10 +61,7 @@ p {
 
 .container {
   border-radius: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 3px;
-  padding-bottom: 3px;
+  padding: 10px 10px 0px 10px;
   outline: 3px solid black;
   max-width: 70vw;
 }

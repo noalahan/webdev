@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  const colors = ["#88ccfb", "#f2e2ba", "#f2e2ba", "#ba2d0b"];
+  const colors = ["#88ccfb", "#f2e2ba", "#ba2d0b"];
 
   async function getData() {
     try {
@@ -27,7 +27,11 @@ $(document).ready(function () {
         time.innerText = row.time;
         info.innerText = row.description;
 
-        container.style.backgroundColor = colors[Math.floor(Math.random() * 4)];
+        let color = Math.floor(Math.random() * 3);
+        container.style.backgroundColor = colors[color];
+        if (color > 1) {
+          container.style.color = "white";
+        }
       });
     } catch (err) {
       console.log(err);

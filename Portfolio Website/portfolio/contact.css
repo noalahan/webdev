@@ -47,8 +47,7 @@ h1 {
 
 .container {
   border-radius: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 10px 10px 0px 10px;
   outline: 3px solid black;
   max-width: 70vw;
   /* overflow-wrap: break-word; */
