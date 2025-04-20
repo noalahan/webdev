@@ -23,12 +23,17 @@ img {
 }
 h1 {
   font-size: 350%;
+  margin-bottom: 10px;
 }
 h2 {
   font-size: 225%;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 h3 {
   font-size: 180%;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 h4 {
   font-size: 140%;
@@ -55,6 +60,11 @@ a {
   position: fixed;
   top: 10px;
   right: 10px;
+}
+.main #btn{
+  display: inline;
+  position: static;
+  margin-bottom: 10px;
 }
 
 .container {
