@@ -40,4 +40,7 @@ $(document).ready(function () {
   }
 
   getData();
+
+  // disable dragging
+  $("img").attr("draggable", false);
 });

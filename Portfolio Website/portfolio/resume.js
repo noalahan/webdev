@@ -159,4 +159,7 @@ $(document).ready(function () {
   getEducation();
   getExperience();
   getHonors();
+
+  // disable dragging
+  $("img").attr("draggable", false);
 });

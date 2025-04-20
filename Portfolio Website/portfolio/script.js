@@ -42,6 +42,9 @@ $(document).ready(function () {
     sizing();
   });
 
+  // disable dragging
+  $("img").attr("draggable", false);
+
   // parallax
   const clouds_back = document.querySelector(".clouds_back");
   const clouds = document.querySelector(".clouds");
