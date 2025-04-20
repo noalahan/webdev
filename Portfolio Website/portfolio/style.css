@@ -1,14 +1,45 @@
 /* general */
 *,
-html,
-body {
+html{
   margin: 0;
   text-decoration: none;
 }
 body {
-  background-image: url(image/gradient.png);
+  background-image: linear-gradient(#88CCFB, #88CCFB, #1A275F, #1A275F);
+  background-attachment: fixed;
   overscroll-behavior: none;
+  overflow-x: hidden;
 }
+
+/* loader */
+.loader{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #242528;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 0.8s ease-in-out;
+}
+.spinner {
+  position: absolute;
+  top: 65vh;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  margin: -15px 0 0 -15px;
+  border: 4px solid #ccc;
+  border-top-color: #333;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
 
 /* clouds */
 #clouds {
@@ -64,6 +95,7 @@ body {
 .title img {
   height: 30vh;
   margin: 20px;
+  z-index: 2;
 }
 
 /* skyline */
@@ -94,9 +126,7 @@ body {
   gap: 15px;
 
   background-color: #f2e2ba;
-  padding-top: 30vh;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding: 30vh 5% 0 5%;
   width: 60%;
 
   position: absolute;
@@ -132,7 +162,7 @@ body {
 }
 #door {
   position: absolute;
-  align-self: center;
+  left: 25%;
   padding-top: 5%;
 }
 

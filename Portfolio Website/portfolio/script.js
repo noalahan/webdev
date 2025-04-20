@@ -1,7 +1,24 @@
+document.querySelectorAll(".lazy-image").forEach((img) => {
+  img.addEventListener("load", () => {
+    const loader = img.parentElement.querySelector(".loader");
+    if (loader) {
+      loader.style.opacity = "0";
+      setTimeout(() => {
+        loader.style.display = "none";
+      }, 800);
+    }
+  });
+
+  // If the image is already cached
+  if (img.complete) {
+    img.dispatchEvent(new Event("load"));
+  }
+});
+
 $(document).ready(function () {
   function sizing() {
     var height = $("#example").height();
-    var w = $("#example").width();
+    var width = $("#example").width();
     var n;
 
     $(".stairs").each(function (i) {
@@ -12,13 +29,13 @@ $(document).ready(function () {
       n = i;
     });
 
-    $("#door").css({ top: (n + 1) * (height + 50) + "px", width: w });
+    $("#door").css({ top: (n + 1) * (height + 50) + "px", width: width });
     var doorH = $("#door").height();
     $(".windows").css({ "padding-bottom": doorH * 1.15 + 20 + "px" });
   }
 
   // staircase sizing
-  sizing();
+  $(window).on("load", sizing); // safer than $(document).ready
 
   // update sizing if the screen resizes
   $(window).resize(function () {
