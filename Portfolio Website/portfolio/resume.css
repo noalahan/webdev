@@ -5,6 +5,7 @@
 body {
   background-color: #f2e2ba;
   font-family: "Raleway", sans-serif;
+  cursor: url(lib/mouse.svg), auto;
 }
 .main {
   transform: skewY(15deg);
@@ -44,6 +45,7 @@ p {
 a {
   font-size: 120%;
   color: blue;
+  cursor: url(lib/mouse.svg), auto;
 }
 #btn {
   background-color: white;
@@ -60,11 +62,18 @@ a {
   position: fixed;
   top: 10px;
   right: 10px;
+
+  cursor: url(lib/pointer.svg), auto;
 }
 .main #btn{
   display: inline;
   position: static;
   margin-bottom: 10px;
+}
+
+/* cursor */
+p, h1, h2, h3, h4, h5, h6, span, li {
+  cursor: url(lib/type.svg), auto;
 }
 
 .container {

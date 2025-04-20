@@ -5,6 +5,7 @@
 body {
   background-color: #607744;
   font-family: "Raleway", sans-serif;
+  cursor: url(lib/mouse.svg), auto;
 }
 .main {
   transform: skewY(15deg);
@@ -35,6 +36,7 @@ h2 {
 a {
   font-size: 180%;
   color: #859d67;
+  cursor: url(lib/pointer.svg), auto;
 }
 h4 {
   font-size: 140%;
@@ -57,6 +59,13 @@ p {
   position: fixed;
   top: 10px;
   right: 10px;
+
+  cursor: url(lib/pointer.svg), auto;
+}
+
+/* cursor */
+p, h1, h2, h3, h4, h5, h6, span, li {
+  cursor: url(lib/type.svg), auto;
 }
 
 .container {

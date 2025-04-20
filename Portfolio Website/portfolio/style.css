@@ -10,7 +10,7 @@ body {
   background-attachment: fixed;
   overscroll-behavior: none;
   overflow-x: hidden;
-  cursor: url(lib/mouse.svg) auto;
+  cursor: url(lib/mouse.svg), auto;
 }
 
 
@@ -44,6 +44,10 @@ body {
   to { transform: rotate(360deg); }
 }
 
+/* links */
+a{
+  cursor: url(lib/pointer.svg), auto;
+}
 
 /* clouds */
 #clouds {
@@ -177,6 +181,7 @@ body {
   top: 0;
   left: 0;
   overflow: hidden;
+  cursor: url(lib/pointer.svg), auto;
 }
 #bird {
   position: absolute;
