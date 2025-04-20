@@ -174,9 +174,9 @@ body {
 }
 #bird {
   position: absolute;
-  width: 5%;
-  bottom: 20vh;
-  right: 10%;
+  width: 5vw;
+  top: 75vh;
+  right: 10vw;
 }
 
 @media screen and (max-width: 1170px) {
@@ -195,9 +195,6 @@ body {
 }
 @media screen and (max-width: 725px) {
   #scrap {
-    display: none;
-  }
-  .bird{
     display: none;
   }
   .windows {
