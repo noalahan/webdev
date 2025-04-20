@@ -1,11 +1,13 @@
 /* general */
 *,
-html {
+html,
+body {
   margin: 0;
   text-decoration: none;
 }
 body {
-  background-color: #1a275f;
+  background-image: url(image/gradient.png);
+  overscroll-behavior: none;
 }
 
 /* clouds */
