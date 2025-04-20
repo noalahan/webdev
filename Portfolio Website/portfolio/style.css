@@ -143,7 +143,7 @@ body {
 #bird {
   position: absolute;
   width: 5%;
-  top: 80vh;
+  bottom: 20vh;
   right: 10%;
 }
 
