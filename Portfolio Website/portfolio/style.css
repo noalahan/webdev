@@ -10,6 +10,7 @@ body {
   background-attachment: fixed;
   overscroll-behavior: none;
   overflow-x: hidden;
+  cursor: url(lib/mouse.svg) auto;
 }
 
 
@@ -174,13 +175,15 @@ body {
   width: 100vw;
   height: 100vh;
   top: 0;
+  left: 0;
   overflow: hidden;
 }
 #bird {
   position: absolute;
   width: 5vw;
-  top: 75vh;
+  bottom: 20vh;
   right: 10vw;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 1170px) {
