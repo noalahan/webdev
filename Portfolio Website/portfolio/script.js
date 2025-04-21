@@ -61,12 +61,28 @@ $(document).ready(function () {
   window.addEventListener("scroll", handleScroll);
 
   $("#bird").click(function () {
-    $(this).attr("src", "image/flyout.png");
-    $(this).animate({ right: "-5%", bottom: "30vh" }, 800, function () {
-      $(this).attr("src", "image/flyin.png");
-      $(this).animate({ right: "10%", bottom: "20vh" }, 800, function () {
-        $(this).attr("src", "image/bird.png");
-      });
-    });
+    const bird = $(this);
+    let count = 0;
+    const maxCount = 21; // Number of times to switch between poses
+
+    function fidget() {
+      if (count < maxCount) {
+        // Switch between sitting and flying
+        if (count % 2 === 0) {
+          bird.attr("src", "image/bird_fly.png");
+        } else {
+          bird.attr("src", "image/bird_sit.png");
+        }
+        count++;
+        // Wait 200ms before next switch
+        setTimeout(fidget, 150 - (maxCount - count) * 10);
+      } else {
+        // Return to original state
+        bird.attr("src", "image/bird.png");
+      }
+    }
+
+    // Start the fidget animation
+    fidget();
   });
 });

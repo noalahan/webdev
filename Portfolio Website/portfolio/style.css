@@ -154,8 +154,8 @@ a {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center bottom;
-  width: 30%; /* Adjust based on your door image size */
-  height: 20vh; /* Adjust based on your door image size */
+  width: 30%;
+  height: 20vh;
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -193,18 +193,21 @@ a {
 }
 
 .bird {
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
+  position: absolute;
+  width: 20%;
+  right: 0;
+  transform: translate(0, -90%);
+  /* top: 0; */
+  /* height: 10vw; */
+  /* background-color: red; */
+  z-index: 2;
   overflow: hidden;
   cursor: url(lib/pointer.svg), auto;
 }
 #bird {
-  position: absolute;
+  /* position: absolute; */
   width: 5vw;
-  bottom: calc(20vh + 85vh);
-  right: 10vw;
+  right: 20vw;
   overflow: hidden;
 }
 
@@ -221,10 +224,7 @@ a {
   #stairs {
     top: 105vh;
   }
-  #bird {
-    width: 8vw;
-    bottom: calc(15vh + 85vh);
-  }
+  #bird { width: 8vw; }
 }
 @media screen and (max-width: 725px) {
   #scrap {
@@ -243,8 +243,6 @@ a {
   }
   #bird {
     width: 12vw;
-    bottom: calc(10vh + 85vh);
-    right: 5vw;
   }
 }
 @media screen and (max-width: 530px) {
@@ -253,7 +251,5 @@ a {
   }
   #bird {
     width: 15vw;
-    bottom: calc(8vh + 85vh);
-    right: 3vw;
   }
 }
