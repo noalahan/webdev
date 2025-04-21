@@ -135,7 +135,7 @@ a {
   gap: 15px;
 
   background-color: #f2e2ba;
-  padding: 30vh 5% 0 5%;
+  padding: 30vh 5% 95vh 5%;
   width: 60%;
 
   position: absolute;
@@ -147,20 +147,27 @@ a {
   padding-bottom: 30px;
 }
 
-/* Add this new CSS for the door image */
-.windows::after {
-  content: "";
+/* door */
+.door {
+  position: absolute;
   background-image: url("image/door.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center bottom;
-  width: 30%;
-  height: 20vh;
-  position: absolute;
+  width: 100%;
+  height: 90vh;
+
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1;
+}
+.door a {
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* stairs */
@@ -184,11 +191,6 @@ a {
 .awning {
   position: absolute;
   width: 100%;
-}
-#door {
-  position: absolute;
-  left: 25%;
-  padding-top: 5%;
 }
 
 .bird {
@@ -216,6 +218,12 @@ a {
   .windows {
     padding-top: 20vh;
   }
+  .door{
+    height: 80vh;
+    a {
+      width: 60%;
+    }
+  }
   #stairs {
     top: 105vh;
   }
@@ -228,13 +236,16 @@ a {
   .windows {
     grid-template-columns: repeat(1, 1fr);
     padding-top: 10vh;
+    padding-bottom: 80vh;
+  }
+  .door{
+    height: 75vh;
+    a {
+      width: 70%;
+    }
   }
   #stairs {
     top: 105vh;
-  }
-  #door {
-    /* padding: 0;  */
-    left: 0;
   }
   #bird {
     width: 12vw;
@@ -246,5 +257,8 @@ a {
   }
   #bird {
     width: 15vw;
+  }
+  .door a {
+      width: 80%;
   }
 }

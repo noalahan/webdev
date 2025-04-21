@@ -31,9 +31,9 @@ $(document).ready(function () {
       n = i;
     });
 
-    $("#door").css({ top: (n + 1) * (height + 50) + "px", width: width });
-    var doorH = $("#door").height();
-    $(".windows").css({ "padding-bottom": doorH * 1.15 + 20 + "px" });
+    // $("#door").css({ top: (n + 1) * (height + 50) + "px", width: width });
+    // var doorH = $("#door").height();
+    // $(".windows").css({ "padding-bottom": doorH * 1.15 + 20 + "px" });
   }
 
   // staircase sizing
