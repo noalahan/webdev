@@ -2,10 +2,12 @@ document.querySelectorAll(".lazy-image").forEach((img) => {
   img.addEventListener("load", () => {
     const loader = img.parentElement.querySelector(".loader");
     if (loader) {
-      loader.style.opacity = "0";
       setTimeout(() => {
-        loader.style.display = "none";
-      }, 800);
+        loader.style.opacity = "0";
+        setTimeout(() => {
+          loader.style.display = "none";
+        }, 800);
+      }, 500);
     }
   });
 

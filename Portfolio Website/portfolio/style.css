@@ -189,7 +189,6 @@ a {
   position: absolute;
   left: 25%;
   padding-top: 5%;
-  /* margin-bottom: 0;*/
 }
 
 .bird {
@@ -197,10 +196,6 @@ a {
   width: 20%;
   right: 0;
   transform: translate(0, -90%);
-  /* top: 0; */
-  /* height: 10vw; */
-  /* background-color: red; */
-  z-index: 2;
   overflow: hidden;
   cursor: url(lib/pointer.svg), auto;
 }
