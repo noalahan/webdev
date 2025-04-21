@@ -48,6 +48,10 @@ h1 {
 
   cursor: url(lib/pointer.svg), auto;
 }
+/* cursor */
+p, h1, h2, h3, h4, h5, h6, span, li {
+  cursor: url(lib/type.svg), auto;
+}
 
 .container {
   max-width: 70vw;
