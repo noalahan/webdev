@@ -1,21 +1,20 @@
 /* general */
 *,
-html{
+html {
   margin: 0;
   text-decoration: none;
 }
 body {
-  background-color: #BA2D0B;
-  background-image: linear-gradient(#88CCFB, #88CCFB, #1A275F, #1A275F);
+  background-color: #ba2d0b;
+  background-image: linear-gradient(#88ccfb, #88ccfb, #1a275f, #1a275f);
   background-attachment: fixed;
   overscroll-behavior: none;
   overflow-x: hidden;
   cursor: url(lib/mouse.svg), auto;
 }
 
-
 /* loader */
-.loader{
+.loader {
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -41,11 +40,13 @@ body {
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* links */
-a{
+a {
   cursor: url(lib/pointer.svg), auto;
 }
 
@@ -146,6 +147,22 @@ a{
   padding-bottom: 30px;
 }
 
+/* Add this new CSS for the door image */
+.windows::after {
+  content: "";
+  background-image: url("image/door.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  width: 30%; /* Adjust based on your door image size */
+  height: 20vh; /* Adjust based on your door image size */
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
 /* stairs */
 #stairs {
   /* div */
@@ -186,7 +203,7 @@ a{
 #bird {
   position: absolute;
   width: 5vw;
-  bottom: 20vh;
+  bottom: calc(20vh + 85vh);
   right: 10vw;
   overflow: hidden;
 }
@@ -204,6 +221,10 @@ a{
   #stairs {
     top: 105vh;
   }
+  #bird {
+    width: 8vw;
+    bottom: calc(15vh + 85vh);
+  }
 }
 @media screen and (max-width: 725px) {
   #scrap {
@@ -220,9 +241,19 @@ a{
     /* padding: 0;  */
     left: 0;
   }
+  #bird {
+    width: 12vw;
+    bottom: calc(10vh + 85vh);
+    right: 5vw;
+  }
 }
 @media screen and (max-width: 530px) {
   #stairs {
     top: 100vh;
+  }
+  #bird {
+    width: 15vw;
+    bottom: calc(8vh + 85vh);
+    right: 3vw;
   }
 }

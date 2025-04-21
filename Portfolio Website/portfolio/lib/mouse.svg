@@ -1,10 +1,10 @@
 <svg width="33" height="37" viewBox="0 0 33 37" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d_25_139)">
-<path d="M30.0398 14.8969L3.21188 1.63262L11.6161 30.3563L17.1012 22.7331L25.4001 32.6234L29.8789 28.8652L21.58 18.975L30.0398 14.8969Z" fill="#88CCFB"/>
-<path d="M30.0398 14.8969L3.21188 1.63262L11.6161 30.3563L17.1012 22.7331L25.4001 32.6234L29.8789 28.8652L21.58 18.975L30.0398 14.8969Z" stroke="#110B11" stroke-width="2.5" stroke-linejoin="bevel"/>
+<path d="M30.0398 15.8969L3.21188 2.63262L11.6161 31.3563L17.1012 23.7331L24 32C27 35 31 30.5 28.5 28L21.58 19.975L30.0398 15.8969Z" fill="#88CCFB"/>
+<path d="M30.0398 15.8969L3.21188 2.63262L11.6161 31.3563L17.1012 23.7331L24 32C27 35 31 30.5 28.5 28L21.58 19.975L30.0398 15.8969Z" stroke="#110B11" stroke-width="2.5" stroke-linejoin="round"/>
 </g>
 <defs>
-<filter id="filter0_d_25_139" x="0.512207" y="0.012085" width="31.8242" height="36.0688" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_d_25_139" x="0.461914" y="0.882568" width="32.3279" height="35.8632" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dy="1"/>
