@@ -6,6 +6,7 @@ document.querySelectorAll(".lazy-image").forEach((img) => {
         loader.style.opacity = "0";
         setTimeout(() => {
           loader.style.display = "none";
+          $(".bird").css("z-index", "2");
         }, 800);
       }, 500);
     }
@@ -30,10 +31,6 @@ $(document).ready(function () {
       $(this).css({ top: (i + 1) * (height + 50) - height * 0.35 + "px" });
       n = i;
     });
-
-    // $("#door").css({ top: (n + 1) * (height + 50) + "px", width: width });
-    // var doorH = $("#door").height();
-    // $(".windows").css({ "padding-bottom": doorH * 1.15 + 20 + "px" });
   }
 
   // staircase sizing
@@ -65,10 +62,19 @@ $(document).ready(function () {
   $("#bird").click(function () {
     const bird = $(this);
     let count = 0;
-    const maxCount = 21; // Number of times to switch between poses
+    const maxCount = 41; // Make sure number of switches is big enough for translation
+    const height = 30;
 
     function fidget() {
       if (count < maxCount) {
+        if (count == 0) {
+          console.log("count", count);
+          $(".bird").css("transform", `translate(0, calc(-90% - ${height}vh))`);
+        }
+        if (count == Math.floor(maxCount * 0.9)) {
+          console.log("count", count);
+          $(".bird").css("transform", `translate(0, calc(-90%))`);
+        }
         // Switch between sitting and flying
         if (count % 2 === 0) {
           bird.attr("src", "image/bird_fly.png");

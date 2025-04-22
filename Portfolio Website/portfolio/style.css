@@ -200,6 +200,7 @@ a {
   transform: translate(0, -90%);
   overflow: hidden;
   cursor: url(lib/pointer.svg), auto;
+  transition: transform 0.8s ease-in-out;
 }
 #bird {
   /* position: absolute; */
@@ -218,7 +219,7 @@ a {
   .windows {
     padding-top: 20vh;
   }
-  .door{
+  .door {
     height: 80vh;
     a {
       width: 60%;
@@ -227,7 +228,9 @@ a {
   #stairs {
     top: 105vh;
   }
-  #bird { width: 8vw; }
+  #bird {
+    width: 8vw;
+  }
 }
 @media screen and (max-width: 725px) {
   #scrap {
@@ -238,7 +241,7 @@ a {
     padding-top: 10vh;
     padding-bottom: 80vh;
   }
-  .door{
+  .door {
     height: 75vh;
     a {
       width: 70%;
@@ -259,6 +262,6 @@ a {
     width: 15vw;
   }
   .door a {
-      width: 80%;
+    width: 80%;
   }
 }
