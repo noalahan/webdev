@@ -63,13 +63,13 @@ $(document).ready(function () {
     const bird = $(this);
     let count = 0;
     const maxCount = 41; // Make sure number of switches is big enough for translation
-    const height = 30;
+    const height = 200;
 
     function fidget() {
       if (count < maxCount) {
         if (count == 0) {
           console.log("count", count);
-          $(".bird").css("transform", `translate(0, calc(-90% - ${height}vh))`);
+          $(".bird").css("transform", `translate(0, calc(-90% - ${height}px))`);
         }
         if (count == Math.floor(maxCount * 0.9)) {
           console.log("count", count);
