@@ -10,6 +10,7 @@ $(document).ready(function () {
 
       const colorA = Math.floor(Math.random() * 3);
       const colorB = Math.floor(Math.random() * 3);
+      const colorC = Math.floor(Math.random() * 3);
 
       data.forEach((row) => {
         const containerA = document.createElement("div");
@@ -23,16 +24,29 @@ $(document).ready(function () {
           containerA.style.color = "white";
         }
 
-        if (row.lang != undefined) {
+        if (row.tool != undefined) {
           const containerB = document.createElement("div");
-          const lang = document.createElement("p");
-          containerB.append(lang);
+          const tool = document.createElement("p");
+          containerB.append(tool);
           containerB.classList.add("container");
-          $("#lang").append(containerB);
-          lang.innerText = row.lang;
+          $("#tool").append(containerB);
+          tool.innerText = row.tool;
           containerB.style.backgroundColor = colors[colorB];
           if (colorB > 0) {
             containerB.style.color = "white";
+          }
+        }
+
+        if (row.lang != undefined) {
+          const containerC = document.createElement("div");
+          const lang = document.createElement("p");
+          containerC.append(lang);
+          containerC.classList.add("container");
+          $("#lang").append(containerC);
+          lang.innerText = row.lang;
+          containerC.style.backgroundColor = colors[colorC];
+          if (colorC > 0) {
+            containerC.style.color = "white";
           }
         }
       });
@@ -156,9 +170,9 @@ $(document).ready(function () {
   }
 
   getSkills();
-  getEducation();
-  getExperience();
-  getHonors();
+  // getEducation();
+  // getExperience();
+  // getHonors();
 
   // disable dragging
   $("img").attr("draggable", false);
