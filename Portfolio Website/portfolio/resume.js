@@ -1,6 +1,23 @@
 $(document).ready(function () {
   const colors = ["#88ccfb", "#607744", "#ba2d0b"];
 
+  // color contact info boxes
+  var color = Math.floor(Math.random() * 3);
+  var textCol = "black"
+  $("#contact .container").css("background-color", colors[color]);
+  if (color > 0) {
+    $("#contact .container").css("color", "white");
+    textCol = "white"
+  }
+    $("#contact a").css("color", textCol)
+  
+  // color summary box
+  color = Math.floor(Math.random() * 3);
+  $("#summary").css("background-color", colors[color]);
+  if (color > 0){
+    $("#summary").css("color", "white");
+  }
+
   async function getSkills() {
     try {
       const response = await fetch(

@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&family=Notable&family=Raleway&family=Righteous&display=swap");
-*{
+* {
   margin-top: 0;
 }
 body {
@@ -47,8 +47,8 @@ p {
 }
 a {
   font-size: 120%;
-  color: blue;
-  cursor: url(lib/mouse.svg), auto;
+  /* color: blue; */
+  cursor: url(lib/pointer.svg), auto;
 }
 #btn {
   background-color: white;
@@ -68,15 +68,23 @@ a {
 
   cursor: url(lib/pointer.svg), auto;
 }
-.main #btn{
+.main #btn {
   display: inline;
   position: static;
-  /* padding: 20px; */
+  font-size: 180%;
   margin-bottom: 10px;
 }
 
 /* cursor */
-p, h1, h2, h3, h4, h5, h6, span, li {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+li {
   cursor: url(lib/type.svg), auto;
 }
 
@@ -84,9 +92,12 @@ p, h1, h2, h3, h4, h5, h6, span, li {
   border-radius: 5px;
   padding: 10px 10px 10px 10px;
   outline: 3px solid black;
+  align-content: center;
 }
 #contact {
-  margin-top: 20px;
+  text-decoration: none;
+  margin-top: 30px;
+  text-align: center;
   display: grid;
   grid-template-columns: 1fr 1fr 1.1fr 2fr 1fr;
   gap: 15px;
@@ -122,16 +133,27 @@ p, h1, h2, h3, h4, h5, h6, span, li {
   gap: 15px;
 }
 
-#contacts a {
-  display: block;
-  padding-bottom: 15px;
-  color: blue;
-  font-size: 150%;
-}
-
 @media screen and (max-width: 1248px) {
-  #contact{
-    grid-template-columns: repeat(3, auto);
+  #contact {
+    grid-template-columns: repeat(6, auto);
+    grid-template-areas:
+      "place place phone phone email email"
+      "link link link git git git";
+  }
+  #place {
+    grid-area: place;
+  }
+  #phone {
+    grid-area: phone;
+  }
+  #email {
+    grid-area: email;
+  }
+  #link {
+    grid-area: link;
+  }
+  #git {
+    grid-area: git;
   }
   #tool {
     grid-template-columns: repeat(3, auto);
@@ -144,10 +166,17 @@ p, h1, h2, h3, h4, h5, h6, span, li {
   }
 }
 @media screen and (max-width: 820px) {
-  #contact{
+  #contact {
     grid-template-columns: repeat(2, auto);
+    grid-template-areas:
+      "place phone"
+      "email email"
+      "link link"
+      "git git";
   }
-  #prog, #tool, #lang{
+  #prog,
+  #tool,
+  #lang {
     grid-template-columns: repeat(2, auto);
   }
   #honor {
