@@ -119,13 +119,20 @@ li {
 }
 #ed {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: 1fr;
   gap: 15px;
 }
 #exp {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
+}
+#exp a{
+  font-size: 180%;
+  margin-top: 10px;
+}
+#exp .container{
+  align-content: baseline;
 }
 #honor {
   display: grid;
@@ -159,7 +166,7 @@ li {
     grid-template-columns: repeat(3, auto);
   }
   #exp {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
   }
   #honor {
     grid-template-columns: repeat(2, 1fr);
@@ -180,6 +187,6 @@ li {
     grid-template-columns: repeat(2, auto);
   }
   #honor {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
   }
 }
