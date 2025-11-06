@@ -141,6 +141,12 @@ li {
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
 }
+#proj a{
+  font-size: 140%;
+}
+#proj h4{
+  margin-top: 10px;
+}
 #honor {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

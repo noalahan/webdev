@@ -173,12 +173,10 @@ $(document).ready(function () {
       data.forEach((row) => {
         const container = document.createElement("div");
         const school = document.createElement("h3");
-        const location = document.createElement("h4");
         const time = document.createElement("h4");
         const info = document.createElement("p");
 
         container.append(school);
-        container.append(location);
         container.append(time);
         container.append(info);
 
@@ -187,7 +185,6 @@ $(document).ready(function () {
         $("#ed").append(container);
 
         school.innerText = row.school;
-        location.innerText = row.location;
         time.innerText = row.time;
         info.innerText = row.additional;
         container.style.backgroundColor = colors[color];
@@ -239,7 +236,7 @@ $(document).ready(function () {
   // getExperience();
   // getSkills();
   getProjects();
-  // getEducation();
+  getEducation();
   // getHonors();
 
   // disable dragging
