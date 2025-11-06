@@ -73,8 +73,8 @@ $(document).ready(function () {
       const data = await response.json();
 
       const colorA = Math.floor(Math.random() * 3);
-      const colorB = colorA; //Math.floor(Math.random() * 3);
-      const colorC = colorA; //Math.floor(Math.random() * 3);
+      const colorB = Math.floor(Math.random() * 3);
+      const colorC = Math.floor(Math.random() * 3);
 
       data.forEach((row) => {
         const containerA = document.createElement("div");
@@ -114,6 +114,48 @@ $(document).ready(function () {
           }
         }
       });
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  async function getProjects(){
+    try {
+      const response = await fetch(
+        "https://opensheet.elk.sh/1rj9kKlpYkmQZ5jeg58eeEPZjbsyNO2G7xUROnc34PpY/resprojects"
+      );
+      const data = await response.json();
+      
+      const color = Math.floor(Math.random() * 3);
+
+      data.forEach((row) => {
+        const container = document.createElement("div");
+        const name = document.createElement("h3");
+        const link = document.createElement("a");
+        const time = document.createElement("h4");
+        const info = document.createElement("p");
+
+        container.append(name);
+        container.append(link);
+        container.append(time);
+        container.append(info);
+
+        container.classList.add("container");
+
+        $("#proj").append(container);
+        name.innerText = row.name;
+        link.innerText = row.linkName;
+        link.setAttribute("href", row.link);
+        link.setAttribute("target", "_blank");
+        link.style.color = color ? "white" : "black";
+        time.innerText = row.date;
+        info.innerText = row.info;
+
+        container.style.backgroundColor = colors[color];
+        if (color > 0){
+          container.style.color = "white"
+        }
+      })
     } catch (err) {
       console.log(err);
     }
@@ -194,8 +236,9 @@ $(document).ready(function () {
     }
   }
 
-  getExperience();
+  // getExperience();
   // getSkills();
+  getProjects();
   // getEducation();
   // getHonors();
 

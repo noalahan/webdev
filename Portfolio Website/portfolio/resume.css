@@ -92,7 +92,6 @@ li {
   border-radius: 5px;
   padding: 10px 10px 10px 10px;
   outline: 3px solid black;
-  align-content: center;
 }
 #contact {
   text-decoration: none;
@@ -101,6 +100,12 @@ li {
   display: grid;
   grid-template-columns: 1fr 1fr 1.1fr 2fr 1fr;
   gap: 15px;
+}
+#contact .container{
+  align-content: center;
+}
+.skill .container{
+  align-content: center;
 }
 #prog {
   display: grid;
@@ -131,8 +136,10 @@ li {
   font-size: 180%;
   margin-top: 10px;
 }
-#exp .container{
-  align-content: baseline;
+#proj{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
 }
 #honor {
   display: grid;
@@ -168,6 +175,9 @@ li {
   #exp {
     grid-template-columns: 1fr;
   }
+  #proj{
+    grid-template-columns: repeat(2, 1fr);
+  }
   #honor {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -186,7 +196,8 @@ li {
   #lang {
     grid-template-columns: repeat(2, auto);
   }
-  #honor {
+  #honor,
+  #proj {
     grid-template-columns: 1fr;
   }
 }
