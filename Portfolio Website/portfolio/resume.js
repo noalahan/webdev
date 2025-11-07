@@ -208,7 +208,9 @@ $(document).ready(function () {
 
       data.forEach((row) => {
         const container = document.createElement("div");
-        const name = document.createElement("h3");
+        const name = row.link
+          ? document.createElement("a")
+          : document.createElement("h3");
         const time = document.createElement("h4");
         const info = document.createElement("p");
 
@@ -221,6 +223,12 @@ $(document).ready(function () {
         $("#honor").append(container);
 
         name.innerText = row.name;
+        if (row.link) {
+          name.setAttribute("href", row.link);
+          name.setAttribute("target", "_blank");
+          name.style.color = color ? "white" : "black";
+          time.style.marginTop = "10px"
+        }
         time.innerText = row.time;
         info.innerText = row.info;
         container.style.backgroundColor = colors[color];
@@ -233,11 +241,11 @@ $(document).ready(function () {
     }
   }
 
-  // getExperience();
-  // getSkills();
+  getExperience();
+  getSkills();
   getProjects();
   getEducation();
-  // getHonors();
+  getHonors();
 
   // disable dragging
   $("img").attr("draggable", false);

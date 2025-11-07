@@ -34,7 +34,6 @@ h2 {
 }
 h3 {
   font-size: 180%;
-  margin-top: 10px;
   margin-bottom: 10px;
 }
 h4 {
@@ -105,6 +104,7 @@ li {
   align-content: center;
 }
 .skill .container{
+  justify-items: center;
   align-content: center;
 }
 #prog {
@@ -151,6 +151,9 @@ li {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
+}
+#honor a{
+  font-size: 180%;
 }
 
 @media screen and (max-width: 1248px) {
