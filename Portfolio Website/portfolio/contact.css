@@ -30,6 +30,14 @@ h1 {
   color: white;
   font-size: 350%;
 }
+h2{
+  font-size: 180%;
+  margin-bottom: 10px;
+}
+p {
+  font-size: 150%;
+  margin-bottom: 10px;
+}
 #btn {
   background-color: white;
   padding: 5px;
@@ -69,13 +77,10 @@ p, h1, h2, h3, h4, h5, h6, span, li {
 #contacts a {
   display: block;
   padding-bottom: 15px;
-  color: #871b00;
   font-size: 150%;
+  font-weight: 600;
   word-break: break-all;
   cursor: url(lib/pointer.svg), auto;
-}
-#contacts p {
-  font-size: 150%;
 }
 
 @media screen and (max-width: 1248px) {

@@ -10,14 +10,14 @@ $(document).ready(function () {
       data.forEach((row) => {
         const container = document.createElement("div");
         const name = document.createElement("h2");
-        var info;
-        if (row.link == 1) {
+        var info = document.createElement("p");
+        if (row.link) {
           info = document.createElement("a");
-          info.setAttribute("href", row.info);
+          info.setAttribute("href", row.link);
           info.setAttribute("target", "_blank");
-        } else {
-          info = document.createElement("p");
+          info.style.color = "black";
         }
+
         container.append(name);
         container.append(info);
 
@@ -32,6 +32,7 @@ $(document).ready(function () {
         container.style.backgroundColor = colors[color];
         if (color > 1) {
           container.style.color = "white";
+          info.style.color = "white"
         }
       });
     } catch (err) {
