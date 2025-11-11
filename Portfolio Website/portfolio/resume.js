@@ -72,10 +72,8 @@ $(document).ready(function () {
       );
       const data = await response.json();
 
-      const colorA = Math.floor(Math.random() * 3);
-      const colorB = Math.floor(Math.random() * 3);
-      const colorC = Math.floor(Math.random() * 3);
-
+      const color = Math.floor(Math.random() * 3);
+      
       data.forEach((row) => {
         const containerA = document.createElement("div");
         const prog = document.createElement("p");
@@ -83,8 +81,8 @@ $(document).ready(function () {
         containerA.classList.add("container");
         $("#prog").append(containerA);
         prog.innerText = row.prog;
-        containerA.style.backgroundColor = colors[colorA];
-        if (colorA > 0) {
+        containerA.style.backgroundColor = colors[color];
+        if (color > 0) {
           containerA.style.color = "white";
         }
 
@@ -95,8 +93,8 @@ $(document).ready(function () {
           containerB.classList.add("container");
           $("#tool").append(containerB);
           tool.innerText = row.tool;
-          containerB.style.backgroundColor = colors[colorB];
-          if (colorB > 0) {
+          containerB.style.backgroundColor = colors[color];
+          if (color > 0) {
             containerB.style.color = "white";
           }
         }
@@ -108,8 +106,8 @@ $(document).ready(function () {
           containerC.classList.add("container");
           $("#lang").append(containerC);
           lang.innerText = row.lang;
-          containerC.style.backgroundColor = colors[colorC];
-          if (colorC > 0) {
+          containerC.style.backgroundColor = colors[color];
+          if (color > 0) {
             containerC.style.color = "white";
           }
         }

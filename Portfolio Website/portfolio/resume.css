@@ -135,6 +135,7 @@ li {
 #exp a{
   font-size: 180%;
   margin-top: 10px;
+  font-weight: 700;
 }
 #proj{
   display: grid;
@@ -154,6 +155,7 @@ li {
 }
 #honor a{
   font-size: 180%;
+  font-weight: 700;
 }
 
 @media screen and (max-width: 1248px) {
