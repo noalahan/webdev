@@ -24,6 +24,7 @@ $(document).ready(function () {
         name.innerText = row.name;
         name.setAttribute("href", row.link);
         name.setAttribute("target", "_blank");
+        name.style.color = "black";
         time.innerText = row.time;
         info.innerText = row.description;
 
@@ -31,6 +32,7 @@ $(document).ready(function () {
         container.style.backgroundColor = colors[color];
         if (color > 1) {
           container.style.color = "white";
+          name.style.color = "white";
         }
       });
     } catch (err) {
