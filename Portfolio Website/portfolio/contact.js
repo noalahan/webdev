@@ -13,7 +13,6 @@ $(document).ready(function () {
         var info = document.createElement("p");
         if (row.link) {
           info = document.createElement("a");
-          info.setAttribute("href", row.link);
           info.setAttribute("target", "_blank");
           info.style.color = "black";
         }
@@ -30,24 +29,30 @@ $(document).ready(function () {
 
         let color = Math.floor(Math.random() * 3);
         container.style.backgroundColor = colors[color];
-        if (color > 1) {
-          container.style.color = "white";
-          info.style.color = "white";
-        }
+        container.style.transition = "color .5s";
+        info.style.transition = "color .5s"
 
         // add hover effect
         function reveal(event) {
           // name.style.display = "none";
           // container.style.color = "red";
+
           container.style.color = color > 1 ? "white" : "black"
-          info.style.color = color > 1 ? "white" : "black"
+          if(row.link){
+            info.style.color = color > 1 ? "white" : "black"
+            info.setAttribute("href", row.link);
+          }
         }
         function hide(){
           container.style.color = colors[color];
+          if(row.link){
+            info.style.color = colors[color];
+            info.removeAttribute("href", row.link);
+          }
           info.style.color = colors[color];
         }
         hide();
-
+        
         container.addEventListener("mouseover", reveal);
         container.addEventListener("click", reveal);
         container.addEventListener("mouseout", hide);
