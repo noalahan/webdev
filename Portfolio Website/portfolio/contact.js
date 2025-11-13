@@ -32,8 +32,25 @@ $(document).ready(function () {
         container.style.backgroundColor = colors[color];
         if (color > 1) {
           container.style.color = "white";
-          info.style.color = "white"
+          info.style.color = "white";
         }
+
+        // add hover effect
+        function reveal(event) {
+          // name.style.display = "none";
+          // container.style.color = "red";
+          container.style.color = color > 1 ? "white" : "black"
+          info.style.color = color > 1 ? "white" : "black"
+        }
+        function hide(){
+          container.style.color = colors[color];
+          info.style.color = colors[color];
+        }
+        hide();
+
+        container.addEventListener("mouseover", reveal);
+        container.addEventListener("click", reveal);
+        container.addEventListener("mouseout", hide);
       });
     } catch (err) {
       console.log(err);
