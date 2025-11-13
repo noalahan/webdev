@@ -63,6 +63,7 @@ p, h1, h2, h3, h4, h5, h6, span, li {
 }
 
 .container {
+  position: relative;
   border-radius: 5px;
   padding: 10px 10px 0px 10px;
   outline: 3px solid black;
@@ -83,6 +84,13 @@ p, h1, h2, h3, h4, h5, h6, span, li {
   font-weight: 600;
   word-break: break-all;
   cursor: url(lib/pointer.svg), auto;
+}
+#contacts img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
 }
 
 @media screen and (max-width: 1248px) {

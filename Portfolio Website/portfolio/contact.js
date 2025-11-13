@@ -16,9 +16,11 @@ $(document).ready(function () {
           info.setAttribute("target", "_blank");
           info.style.color = "black";
         }
+        const img = document.createElement("img");
 
         container.append(name);
         container.append(info);
+        container.append(img);
 
         container.classList.add("container");
 
@@ -26,33 +28,28 @@ $(document).ready(function () {
 
         name.innerText = row.name;
         info.innerText = row.info;
+        info.setAttribute("href", row.link);
+        info.style.transition = "color .5s";
+        img.setAttribute("src", "image/logo.png");
+        img.style.transition = "display .5"
 
         let color = Math.floor(Math.random() * 3);
         container.style.backgroundColor = colors[color];
         container.style.transition = "color .5s";
-        info.style.transition = "color .5s"
 
-        // add hover effect
-        function reveal(event) {
-          // name.style.display = "none";
-          // container.style.color = "red";
-
+          // add hover effect
+        function reveal() {
+          img.style.display = "none";
           container.style.color = color > 1 ? "white" : "black"
-          if(row.link){
-            info.style.color = color > 1 ? "white" : "black"
-            info.setAttribute("href", row.link);
-          }
+          info.style.color = color > 1 ? "white" : "black"
         }
         function hide(){
           container.style.color = colors[color];
-          if(row.link){
-            info.style.color = colors[color];
-            info.removeAttribute("href", row.link);
-          }
           info.style.color = colors[color];
         }
         hide();
         
+        // using both click and hover for to be both phone and web friendly
         container.addEventListener("mouseover", reveal);
         container.addEventListener("click", reveal);
         container.addEventListener("mouseout", hide);
