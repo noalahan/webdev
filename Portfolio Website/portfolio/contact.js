@@ -31,7 +31,7 @@ $(document).ready(function () {
         info.setAttribute("href", row.link);
         info.style.transition = "color .5s";
         img.setAttribute("src", "image/logo.png");
-        img.style.transition = "width .5s";
+        img.style.transition = "height .5s";
 
         let color = Math.floor(Math.random() * 3);
         container.style.backgroundColor = colors[color];
@@ -39,16 +39,16 @@ $(document).ready(function () {
 
         // add hover effect
         function reveal() {
-          img.style.transition = "width .25s";
-          img.style.width = "0px";
+          img.style.transition = "height .25s";
+          img.style.height = "0px";
           container.style.color = color > 1 ? "white" : "black";
           info.style.color = color > 1 ? "white" : "black";
         }
         function hide() {
           container.style.color = colors[color];
           info.style.color = colors[color];
-          img.style.transition = "width .5s";
-          img.style.width = "70px";
+          img.style.transition = "height .5s";
+          img.style.height = "70px";
         }
         hide();
 
