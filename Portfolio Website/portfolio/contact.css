@@ -18,7 +18,7 @@ img {
   width: 100vw;
 }
 #floor{
-  transform: translate(0, 43%) skewY(15deg);
+  transform: translate(0, calc(50vw * tan(15deg))) skewY(15deg);
 }
 #caterpillar {
   width: 15vw;

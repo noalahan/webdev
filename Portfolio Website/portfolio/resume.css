@@ -18,6 +18,9 @@ img {
   left: 0;
   width: 100vw;
 }
+#floor{
+  transform: translate(0, calc(50vw * tan(15deg))) skewY(15deg);
+}
 #spacer {
   /* no cutoff above, no blur below */
   height: calc(40vw * tan(15deg));
