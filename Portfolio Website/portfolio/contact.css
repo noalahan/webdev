@@ -90,9 +90,8 @@ p, h1, h2, h3, h4, h5, h6, span, li {
 }
 #contacts img{
   position: relative;
-  height: 100%;
+  height: 70px;
   width: auto;
-
 }
 #contacts #cover{
   position: absolute;
@@ -105,8 +104,6 @@ p, h1, h2, h3, h4, h5, h6, span, li {
   flex-direction: row;
   gap: 10px;
   justify-content: center;
-
-  background-color: black;
 }
 
 @media screen and (max-width: 1248px) {
