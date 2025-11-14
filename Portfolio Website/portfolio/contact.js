@@ -8,6 +8,7 @@ $(document).ready(function () {
       );
       const data = await response.json();
       data.forEach((row) => {
+        // create elements
         const container = document.createElement("div");
         const name = document.createElement("h2");
         var info = document.createElement("p");
@@ -16,39 +17,49 @@ $(document).ready(function () {
           info.setAttribute("target", "_blank");
           info.style.color = "black";
         }
-        const img = document.createElement("img");
+        const cover = document.createElement("div");
 
+        // append elements to container
         container.append(name);
         container.append(info);
-        container.append(img);
+        container.append(cover);
 
+        // add container to webpage
         container.classList.add("container");
-
         $("#contacts").append(container);
 
+        // set values for elements
         name.innerText = row.name;
         info.innerText = row.info;
         info.setAttribute("href", row.link);
         info.style.transition = "color .5s";
-        img.setAttribute("src", "image/logo.png");
-        img.style.transition = "height .5s";
+        cover.setAttribute("id", "cover");
+        cover.style.transition = "height .5s";
+        row.svg.split(" ").forEach((image) => {
+          const svg = document.createElement("img");
+          svg.setAttribute("src", "lib/"+image+".svg");
+          cover.append(svg)
+        });
 
+        // set color
         let color = Math.floor(Math.random() * 3);
         container.style.backgroundColor = colors[color];
         container.style.transition = "color .5s";
 
         // add hover effect
         function reveal() {
-          img.style.transition = "height .25s";
-          img.style.height = "0px";
+          cover.getElementsByTagName("img").forEach(img){
+            img.style.transition
+          }
+          cover.style.height = "10px";
+          // cover.css({"transition": "height .25s", "height": "0px"})
           container.style.color = color > 1 ? "white" : "black";
           info.style.color = color > 1 ? "white" : "black";
         }
         function hide() {
           container.style.color = colors[color];
           info.style.color = colors[color];
-          img.style.transition = "height .5s";
-          img.style.height = "70px";
+          $("#cover img").css({"transition": "height .5s", "height": "70px"})
         }
         hide();
 
