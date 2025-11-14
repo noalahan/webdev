@@ -21,7 +21,7 @@ document.querySelectorAll(".lazy-image").forEach((img) => {
 $(document).ready(function () {
   function sizing() {
     var height = $("#example").height();
-    var width = $("#example").width();
+    // var width = $("#example").width();
     var n;
 
     $(".stairs").each(function (i) {
@@ -31,6 +31,14 @@ $(document).ready(function () {
       $(this).css({ top: (i + 1) * (height + 50) - height * 0.35 + "px" });
       n = i;
     });
+
+    if ($(document).width() < 725) {
+      $(".awning").attr("src", "image/small_awning.png");
+      $("#flowers").attr("src", "image/small_flowers.png");
+    } else {
+      $(".awning").attr("src", "image/big_awning.png");
+      $("#flowers").attr("src", "image/big_flowers.png");
+    }
   }
 
   // staircase sizing

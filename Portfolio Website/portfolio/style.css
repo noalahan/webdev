@@ -249,7 +249,7 @@ a {
     }
   }
   #stairs {
-    top: 105vh;
+    top: 100vh;
   }
   #bird {
     width: 12vw;
@@ -257,7 +257,7 @@ a {
 }
 @media screen and (max-width: 530px) {
   #stairs {
-    top: 100vh;
+    top: 98vh;
   }
   #bird {
     width: 15vw;

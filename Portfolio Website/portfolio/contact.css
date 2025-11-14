@@ -17,6 +17,9 @@ img {
   left: 0;
   width: 100vw;
 }
+#floor{
+  transform: translate(0, 43%) skewY(15deg);
+}
 #caterpillar {
   width: 15vw;
   cursor: url(lib/pointer.svg), auto;
