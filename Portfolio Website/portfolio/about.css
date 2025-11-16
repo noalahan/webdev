@@ -1,11 +1,51 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&family=Notable&family=Raleway&family=Righteous&display=swap");
-*{
+* {
   margin-top: 0;
 }
 body {
   background-color: #88ccfb;
+  /* background-color: #607644; */
   font-family: "Raleway", sans-serif;
   cursor: url(lib/mouse.svg), auto;
+}
+
+#window {
+  left: 50vw;
+  top: 50vh;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  animation: windowAnim .7s cubic-bezier(0.9, 0, 1, .5) forwards;
+}
+.window {
+  /* size of screen div, cuts off img access */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  animation: hide .7s forwards;
+  background-color: #88ccfb;
+}
+@keyframes windowAnim {
+  100% {
+    width: 1500vw;
+  }
+}
+@keyframes hide {
+  40%{
+    background-color: #88ccfb;
+  }
+  70%{
+    background-color: #88ccfb;
+  }
+  100%{
+    background-color: transparent;
+    display: none;
+  }
 }
 .main {
   transform: skewY(15deg);
@@ -17,10 +57,10 @@ img {
   left: 0;
   width: 100vw;
 }
-#floor{
+#floor {
   transform: translate(0, calc(50vw * tan(15deg))) skewY(15deg);
 }
-#books{
+#books {
   width: 23vw;
   cursor: url(lib/pointer.svg), auto;
 }
@@ -52,7 +92,15 @@ h1 {
   cursor: url(lib/pointer.svg), auto;
 }
 /* cursor */
-p, h1, h2, h3, h4, h5, h6, span, li {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+li {
   cursor: url(lib/type.svg), auto;
 }
 

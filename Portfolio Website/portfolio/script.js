@@ -22,7 +22,7 @@ $(document).ready(function () {
   function sizing() {
     var height = $("#example").height();
     // var width = $("#example").width();
-    var n;
+    // var n;
 
     $(".stairs").each(function (i) {
       $(this).css({ top: (i + 1) * (height + 50) - height * 0.05 + "px" });
