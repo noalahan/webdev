@@ -1,3 +1,13 @@
+function loaded(){
+  setTimeout(showPage, 100);
+}
+
+function showPage(){
+  $(".loader").css("display", "none");
+  $("#window").css("animation", "windowAnim 0.7s cubic-bezier(0.9, 0, 1, 0.5) forwards");
+  $(".window").css("animation", "hide 0.7s forwards");
+}
+
 $(document).ready(function () {
   async function getData() {
     try {

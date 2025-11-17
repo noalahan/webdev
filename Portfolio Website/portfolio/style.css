@@ -62,7 +62,7 @@ a {
   left: 0;
   top: 0;
   height: 100%;
-  animation: moveCloudsBack 40s linear infinite;
+  animation: moveClouds 80s linear infinite;
 }
 .clouds {
   /* size of screen div, cuts off img access */
@@ -84,11 +84,6 @@ a {
 @keyframes moveClouds {
   100% {
     transform: translateX(-50%);
-  }
-}
-@keyframes moveCloudsBack {
-  100% {
-    transform: translateX(-25%);
   }
 }
 

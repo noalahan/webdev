@@ -16,7 +16,6 @@ body {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  animation: windowAnim .7s cubic-bezier(0.9, 0, 1, .5) forwards;
 }
 .window {
   /* size of screen div, cuts off img access */
@@ -27,7 +26,6 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  animation: hide .7s forwards;
   background-color: #88ccfb;
 }
 @keyframes windowAnim {
@@ -36,17 +34,40 @@ body {
   }
 }
 @keyframes hide {
-  40%{
+  40% {
     background-color: #88ccfb;
   }
-  70%{
+  /* 70% {
     background-color: #88ccfb;
-  }
-  100%{
+  } */
+  100% {
     background-color: transparent;
     display: none;
   }
 }
+
+/*HTML:     <div class="loader"><img src="image/big_flowers.png"></div>*/
+.loader {
+  width: fit-content;
+  display: inline-block;
+  animation: reveal 2s ease-in-out infinite;
+  /* animation: reveal 2s steps(20) infinite; */
+}
+.loader img {
+  width: 500px;
+  display: block;
+  position: relative;
+  /* overflow: hidden; */
+}
+@keyframes reveal {
+  from {
+    clip-path: inset(0 100% 0 -200%);
+  }
+  to {
+    clip-path: inset(0 -200% 0 100%);
+  }
+}
+
 .main {
   transform: skewY(15deg);
   margin-left: 22vw;

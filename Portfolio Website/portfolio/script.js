@@ -1,22 +1,12 @@
-document.querySelectorAll(".lazy-image").forEach((img) => {
-  img.addEventListener("load", () => {
-    const loader = img.parentElement.querySelector(".loader");
-    if (loader) {
-      setTimeout(() => {
-        loader.style.opacity = "0";
-        setTimeout(() => {
-          loader.style.display = "none";
-          $(".bird").css("z-index", "2");
-        }, 800);
-      }, 500);
-    }
-  });
-
-  // If the image is already cached
-  if (img.complete) {
-    img.dispatchEvent(new Event("load"));
-  }
-});
+function closeLoader(){
+  setTimeout(() => {
+    $(".loader").css("opacity", "0");
+    setTimeout(() => {
+      $(".loader").css("display", "none");
+      $(".bird").css("z-index", "2");
+    }, 800);
+  }, 300);
+}
 
 $(document).ready(function () {
   function sizing() {
