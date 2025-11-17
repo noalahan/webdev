@@ -8,14 +8,6 @@ body {
   cursor: url(lib/mouse.svg), auto;
 }
 
-#window {
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  left: 50vw;
-  top: 50vh;
-  transform: translate(-50%, -50%);
-}
 .loader {
   /* size of screen div, cuts off img access */
   position: fixed;
@@ -26,25 +18,32 @@ body {
   overflow: hidden;
   background-color: #88ccfb;
 }
+.loader img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#loading {
+  animation: reveal .7s linear infinite alternate;
+  transition: opacity .4s;
+}
 @keyframes windowAnim {
+  /* applied via js */
   to { width: 1500vw; }
 }
 @keyframes hide {
+  /* applied via js */
   40% { background-color: #88ccfb; }
   100% {
     background-color: transparent;
     display: none;
   }
 }
-#loading {
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  animation: reveal 1s linear infinite alternate;
-  transition: opacity .3s;
-}
 @keyframes reveal {
-  from { clip-path: inset(0 0% 0 0); }
+  from { clip-path: inset(0 20% 0 0); }
   to { clip-path: inset(0 65% 0 0); }
 }
 

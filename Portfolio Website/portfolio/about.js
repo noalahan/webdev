@@ -31,7 +31,7 @@ $(document).ready(function () {
   }
 
   getData();
-  // loaded();
+  loaded();
 
   // disable dragging
   $("img").attr("draggable", false);
