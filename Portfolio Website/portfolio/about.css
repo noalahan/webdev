@@ -13,8 +13,8 @@ body {
   position: fixed;
   left: 0;
   top: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   background-color: #88ccfb;
 }
@@ -22,8 +22,8 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  left: 50vw;
-  top: 50vh;
+  left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
 }
 @keyframes windowAnim {
@@ -31,6 +31,7 @@ body {
   to { width: 1500vw; }
 }
 @keyframes hide {
+  /* applied via js */
   40% { background-color: #88ccfb; }
   100% {
     background-color: transparent;
