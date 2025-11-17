@@ -4,7 +4,6 @@
 }
 body {
   background-color: #88ccfb;
-  /* background-color: #607644; */
   font-family: "Raleway", sans-serif;
   cursor: url(lib/mouse.svg), auto;
 }
@@ -17,10 +16,9 @@ body {
   height: 100vh;
   object-fit: cover;
 }
-.window {
+.loader {
   /* size of screen div, cuts off img access */
   position: fixed;
-  z-index: 1;
   left: 0;
   top: 0;
   width: 100vw;
@@ -29,43 +27,25 @@ body {
   background-color: #88ccfb;
 }
 @keyframes windowAnim {
-  100% {
-    width: 1500vw;
-  }
+  to { width: 1500vw; }
 }
 @keyframes hide {
-  40% {
-    background-color: #88ccfb;
-  }
-  /* 70% {
-    background-color: #88ccfb;
-  } */
+  40% { background-color: #88ccfb; }
   100% {
     background-color: transparent;
     display: none;
   }
 }
-
-/*HTML:     <div class="loader"><img src="image/big_flowers.png"></div>*/
-.loader {
-  width: fit-content;
-  display: inline-block;
-  animation: reveal 2s ease-in-out infinite;
-  /* animation: reveal 2s steps(20) infinite; */
-}
-.loader img {
-  width: 500px;
-  display: block;
-  position: relative;
-  /* overflow: hidden; */
+#loading {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  animation: reveal 1s linear infinite alternate;
+  transition: opacity .3s;
 }
 @keyframes reveal {
-  from {
-    clip-path: inset(0 100% 0 -200%);
-  }
-  to {
-    clip-path: inset(0 -200% 0 100%);
-  }
+  from { clip-path: inset(0 0% 0 0); }
+  to { clip-path: inset(0 65% 0 0); }
 }
 
 .main {

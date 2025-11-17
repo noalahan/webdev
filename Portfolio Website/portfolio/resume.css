@@ -8,6 +8,47 @@ body {
   cursor: url(lib/mouse.svg), auto;
   max-width: 95vw;
 }
+
+#window {
+  left: 50vw;
+  top: 50vh;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+.loader {
+  /* size of screen div, cuts off img access */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #88ccfb;
+}
+@keyframes windowAnim {
+  to { width: 1500vw; }
+}
+@keyframes hide {
+  40% { background-color: #88ccfb; }
+  100% {
+    background-color: transparent;
+    display: none;
+  }
+}
+#loading {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  animation: reveal 1s linear infinite alternate;
+  transition: opacity .3s;
+}
+@keyframes reveal {
+  from { clip-path: inset(0 0% 0 0); }
+  to { clip-path: inset(0 65% 0 0); }
+}
+
 .main {
   transform: skewY(15deg);
   margin-left: 22vw;

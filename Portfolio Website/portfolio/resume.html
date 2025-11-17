@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="resume.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
-  <body>
+  <body onload="loaded()">
     <img src="image/resume_back.png" alt="room background" />
 
     <div class="main">
@@ -79,6 +79,12 @@
     <a href="index.html" id="btn">home</a>
 
     <img src="image/resume_fore.png" id="floor" alt="room foreground" />
+
+    <!-- loader and transition animation -->
+    <div class="loader">
+      <img src="image/open_window.png" id="window" />
+      <img src="image/loading.png" id="loading">
+    </div>
 
     <script src="resume.js"></script>
   </body>

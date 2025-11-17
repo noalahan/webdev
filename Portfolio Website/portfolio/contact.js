@@ -1,3 +1,11 @@
+function loaded() {
+  setTimeout(() => {
+    $("#loading").css({ animation: "none", opacity: "0" });
+    $("#window").css("animation", "windowAnim 0.7s cubic-bezier(0.9, 0, 1, 0.5) forwards");
+    $(".loader").css("animation", "hide 0.7s forwards");
+  }, 100);
+}
+
 $(document).ready(function () {
   const colors = ["#88ccfb", "#f2e2ba", "#607744"];
 

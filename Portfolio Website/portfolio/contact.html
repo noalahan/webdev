@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="contact.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
-  <body>
+  <body onload="loaded()">
     <img src="image/contact_back.png" alt="room background" />
 
     <div class="main">
@@ -25,6 +25,12 @@
       target="_blank"
       ><img src="image/caterpillar.png" alt="caterpillar" id="caterpillar"
     /></a>
+
+    <!-- loader and transition animation -->
+    <div class="loader">
+      <img src="image/open_window.png" id="window" />
+      <img src="image/loading.png" id="loading">
+    </div>
 
     <script src="contact.js"></script>
   </body>

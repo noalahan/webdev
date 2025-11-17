@@ -1,6 +1,29 @@
+function sizing() {
+  var height = $("#example").height();
+  // var width = $("#example").width();
+  // var n;
+
+  $(".stairs").each(function (i) {
+    $(this).css({ top: (i + 1) * (height + 50) - height * 0.05 + "px" });
+  });
+  $(".awning").each(function (i) {
+    $(this).css({ top: (i + 1) * (height + 50) - height * 0.35 + "px" });
+    n = i;
+  });
+
+  if ($(document).width() < 725) {
+    $(".awning").attr("src", "image/small_awning.png");
+    $("#flowers").attr("src", "image/small_flowers.png");
+  } else {
+    $(".awning").attr("src", "image/big_awning.png");
+    $("#flowers").attr("src", "image/big_flowers.png");
+  }
+}
+
 function closeLoader(){
   setTimeout(() => {
     $(".loader").css("opacity", "0");
+    sizing();
     setTimeout(() => {
       $(".loader").css("display", "none");
       $(".bird").css("z-index", "2");
@@ -9,31 +32,6 @@ function closeLoader(){
 }
 
 $(document).ready(function () {
-  function sizing() {
-    var height = $("#example").height();
-    // var width = $("#example").width();
-    // var n;
-
-    $(".stairs").each(function (i) {
-      $(this).css({ top: (i + 1) * (height + 50) - height * 0.05 + "px" });
-    });
-    $(".awning").each(function (i) {
-      $(this).css({ top: (i + 1) * (height + 50) - height * 0.35 + "px" });
-      n = i;
-    });
-
-    if ($(document).width() < 725) {
-      $(".awning").attr("src", "image/small_awning.png");
-      $("#flowers").attr("src", "image/small_flowers.png");
-    } else {
-      $(".awning").attr("src", "image/big_awning.png");
-      $("#flowers").attr("src", "image/big_flowers.png");
-    }
-  }
-
-  // staircase sizing
-  $(window).on("load", sizing); // safer than $(document).ready
-
   // update sizing if the screen resizes
   $(window).resize(function () {
     sizing();

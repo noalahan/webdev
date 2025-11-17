@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="projects.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
-  <body>
+  <body onload="loaded()">
     <img src="image/projects_back.png" alt="room background" />
 
     <div class="main">
@@ -28,6 +28,12 @@
     <img src="image/projects_fore.png" id="floor" alt="room foreground" />
     <img src="image/plant.png" alt="plant" id="plant" />
 
+    <!-- loader and transition animation -->
+    <div class="loader">
+      <img src="image/open_window.png" id="window" />
+      <img src="image/loading.png" id="loading">
+    </div>
+    
     <script src="projects.js"></script>
   </body>
 </html>
