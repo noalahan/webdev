@@ -1,7 +1,10 @@
 function loaded() {
   setTimeout(() => {
     $("#loading").css({ animation: "none", opacity: "0" });
-    $("#window").css("animation", "windowAnim 0.7s cubic-bezier(0.9, 0, 1, 0.5) forwards");
+    $("#window").css(
+      "animation",
+      "windowAnim 0.7s cubic-bezier(0.9, 0, 1, 0.5) forwards"
+    );
     $(".loader").css("animation", "hide 0.7s forwards");
   }, 100);
 }
@@ -58,7 +61,7 @@ $(document).ready(function () {
           org.setAttribute("href", row.link);
           org.setAttribute("target", "_blank");
           org.style.color = color ? "white" : "black";
-          name.style.marginTop = "10px"
+          name.style.marginTop = "10px";
         }
         name.innerText = row.title;
         time.innerText = row.time;
@@ -81,7 +84,7 @@ $(document).ready(function () {
       const data = await response.json();
 
       const color = Math.floor(Math.random() * 3);
-      
+
       data.forEach((row) => {
         const containerA = document.createElement("div");
         const prog = document.createElement("p");
@@ -125,13 +128,13 @@ $(document).ready(function () {
     }
   }
 
-  async function getProjects(){
+  async function getProjects() {
     try {
       const response = await fetch(
         "https://opensheet.elk.sh/1rj9kKlpYkmQZ5jeg58eeEPZjbsyNO2G7xUROnc34PpY/resprojects"
       );
       const data = await response.json();
-      
+
       const color = Math.floor(Math.random() * 3);
 
       data.forEach((row) => {
@@ -158,10 +161,10 @@ $(document).ready(function () {
         info.innerText = row.info;
 
         container.style.backgroundColor = colors[color];
-        if (color > 0){
-          container.style.color = "white"
+        if (color > 0) {
+          container.style.color = "white";
         }
-      })
+      });
     } catch (err) {
       console.log(err);
     }
@@ -233,7 +236,7 @@ $(document).ready(function () {
           name.setAttribute("href", row.link);
           name.setAttribute("target", "_blank");
           name.style.color = color ? "white" : "black";
-          time.style.marginTop = "10px"
+          time.style.marginTop = "10px";
         }
         time.innerText = row.time;
         info.innerText = row.info;
@@ -252,6 +255,8 @@ $(document).ready(function () {
   getProjects();
   getEducation();
   getHonors();
+
+  loaded();
 
   // disable dragging
   $("img").attr("draggable", false);
