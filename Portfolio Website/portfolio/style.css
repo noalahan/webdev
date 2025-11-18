@@ -24,13 +24,12 @@ body {
   background-color: #242528;
   z-index: 1;
   opacity: 1;
-  transition: opacity 0.8s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 .spinner {
   position: absolute;
   top: 65vh;
-  left: 50%;
-  /* transform: translateX(-50%); */
+  left: 48vw;
   width: 8vw;
   height: 8vw;
   margin: -15px 0 0 -15px;
@@ -41,9 +40,7 @@ body {
 }
 
 @keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+  to { transform: rotate(360deg); }
 }
 
 /* links */

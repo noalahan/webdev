@@ -27,8 +27,8 @@ function closeLoader(){
     setTimeout(() => {
       $(".loader").css("display", "none");
       $(".bird").css("z-index", "2");
-    }, 800);
-  }, 300);
+    }, 500);
+  }, 100);
 }
 
 $(document).ready(function () {
