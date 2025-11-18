@@ -27,13 +27,14 @@ body {
   transition: opacity 0.5s ease-in-out;
 }
 .spinner {
+  align-items: center;
   position: absolute;
   top: 65vh;
-  left: 48vw;
+  left: 45vw;
   width: 8vw;
   height: 8vw;
-  margin: -15px 0 0 -15px;
-  border: 0.8vw solid #ccc;
+  /* margin: -15px 0 0 -15px; */
+  border: 1vw solid #ccc;
   border-top-color: #333;
   border-radius: 50%;
   animation: spin 1s linear infinite;
@@ -224,6 +225,12 @@ a {
   #bird {
     width: 8vw;
   }
+  .spinner{
+    width: 10vw;
+    height: 10vw;
+    border-width: 1.3vw;
+    left: 43.7vw;
+  }
 }
 @media screen and (max-width: 725px) {
   #scrap {
@@ -246,6 +253,12 @@ a {
   #bird {
     width: 12vw;
   }
+  .spinner{
+    width: 12vw;
+    height: 12vw;
+    border-width: 1.7vw;
+    left: 42.3vw;
+  }
 }
 @media screen and (max-width: 530px) {
   #stairs {
@@ -256,5 +269,11 @@ a {
   }
   .door a {
     width: 80%;
+  }
+  .spinner{
+    width: 15vw;
+    height: 15vw;
+    border-width: 2vw;
+    left: 40.5vw;
   }
 }
